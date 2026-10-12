@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunset Ridge | Ridgetop Camping above Bellingham, WA</title>
+<meta name="description" content="Five private sites on 30 forested acres above the North Whatcom Valley. Tent sites, a vintage trailer and an A-frame cabin with sunset views, 15 minutes from Bellingham.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --pine:#1f3a2e;
+  --pine-deep:#13261d;
+  --moss:#5b7a52;
+  --fern:#a9bf8e;
+  --ember:#e2683c;
+  --ember-dark:#c4532b;
+  --amber:#f2a541;
+  --dusk:#7d5a73;
+  --mist:#f4efe6;
+  --paper:#fbf8f2;
+  --stone:#6d6a62;
+  --ink:#1c1f1b;
+  --line:rgba(31,58,46,.14);
+  --radius:18px;
+  --shadow:0 18px 40px -18px rgba(19,38,29,.45);
+  --ease:cubic-bezier(.22,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+button,input,select,textarea{font:inherit}
+h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.05;letter-spacing:-.02em}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ember)}
+.section{padding:clamp(70px,9vw,120px) 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:44px}
+.section-head h2{font-size:clamp(2.1rem,4.6vw,3.6rem);font-weight:800;color:var(--pine);max-width:14ch;margin-top:10px}
+.section-head p{max-width:42ch;color:var(--stone)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;border:0;font-weight:700;cursor:pointer;text-decoration:none;transition:transform .3s var(--ease),background .3s,box-shadow .3s}
+.btn-ember{background:var(--ember);color:#fff;box-shadow:0 10px 24px -10px rgba(226,104,60,.8)}
+.btn-ember:hover{background:var(--ember-dark);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.26);transform:translateY(-2px)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s,box-shadow .35s,padding .35s;padding:18px 0}
+.nav.scrolled{background:rgba(251,248,242,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:10px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.3rem;text-decoration:none;color:#fff;transition:color .3s}
+.logo i{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--ember);color:#fff;font-size:1rem}
+.nav.scrolled .logo{color:var(--pine)}
+.nav-links{display:flex;gap:6px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;color:#fff;font-weight:600;font-size:.95rem;padding:9px 14px;border-radius:999px;transition:background .25s,color .25s}
+.nav-links a:hover{background:rgba(255,255,255,.16)}
+.nav.scrolled .nav-links a{color:var(--pine)}
+.nav.scrolled .nav-links a:hover{background:rgba(31,58,46,.08)}
+.nav-links .btn{padding:11px 20px;color:#fff !important;background:var(--ember)}
+.nav-links .btn:hover{background:var(--ember-dark)!important}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:0;background:rgba(255,255,255,.18);color:#fff;font-size:1.1rem;cursor:pointer}
+.nav.scrolled .burger{background:rgba(31,58,46,.08);color:var(--pine)}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;color:#fff;isolation:isolate;overflow:hidden}
+.hero-img{position:absolute;inset:0;z-index:-2}
+.hero-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:settle 2.4s var(--ease) forwards}
+@keyframes settle{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(19,38,29,.55) 0%,rgba(19,38,29,0) 30%),
+  linear-gradient(0deg,rgba(19,38,29,.92) 0%,rgba(19,38,29,.35) 45%,rgba(226,104,60,.12) 100%)}
+.hero-inner{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:end;padding:150px 0 140px}
+.hero h1{font-size:clamp(3.2rem,9vw,7.6rem);font-weight:800;line-height:.92}
+.hero h1 span{display:block;color:var(--amber)}
+.hero-lead{font-size:clamp(1.02rem,1.5vw,1.2rem);max-width:46ch;margin:22px 0 30px;color:rgba(255,255,255,.88)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-meta{display:grid;gap:12px;justify-self:end;width:min(320px,100%)}
+.meta-card{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);transition:transform .35s var(--ease),background .35s}
+.meta-card:hover{transform:translateX(-6px);background:rgba(255,255,255,.18)}
+.meta-card i{width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;background:rgba(242,165,65,.2);color:var(--amber);font-size:1.1rem}
+.meta-card strong{display:block;font-family:'Bricolage Grotesque';font-size:1.3rem;line-height:1.1}
+.meta-card small{color:rgba(255,255,255,.75);font-size:.85rem}
+
+/* QUICK BAR */
+.quick{position:relative;z-index:5;margin-top:-62px}
+.quick form{display:grid;grid-template-columns:1.3fr 1fr 1fr .8fr auto;gap:6px;background:#fff;border-radius:22px;padding:10px;box-shadow:var(--shadow)}
+.q-field{display:flex;flex-direction:column;padding:10px 16px;border-radius:14px;transition:background .25s}
+.q-field:hover{background:var(--mist)}
+.q-field label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--stone);display:flex;gap:6px;align-items:center}
+.q-field label i{color:var(--ember)}
+.q-field select,.q-field input{border:0;background:transparent;font-weight:700;color:var(--pine);padding:4px 0;outline:none;width:100%}
+.quick .btn{border-radius:16px;padding:0 28px;min-height:62px}
+
+/* VIEW BAND */
+.viewband{padding:80px 0 20px}
+.compass{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:34px clamp(20px,4vw,48px);border-radius:28px;background:linear-gradient(100deg,#2a5162 0%,var(--pine) 50%,#4a3b52 100%);color:#fff;position:relative;overflow:hidden}
+.compass::after{content:"";position:absolute;inset:auto -10% -60% -10%;height:120%;background:radial-gradient(ellipse at center,rgba(242,165,65,.35),transparent 60%);pointer-events:none}
+.dir{display:flex;align-items:center;gap:16px}
+.dir.east{justify-content:flex-end;text-align:right}
+.dir i{font-size:1.6rem;color:var(--amber)}
+.dir small{display:block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;opacity:.7;font-weight:700}
+.dir strong{font-family:'Bricolage Grotesque';font-size:clamp(1.1rem,2.2vw,1.6rem)}
+.compass-mid{text-align:center;position:relative;z-index:1}
+.compass-mid i{font-size:2.2rem;color:var(--amber);animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.compass-mid p{font-size:.85rem;opacity:.85;margin-top:6px;max-width:22ch}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,6vw,80px);align-items:center}
+.about-photos{position:relative;aspect-ratio:1/1.05}
+.about-photos figure{position:absolute;overflow:hidden;border-radius:var(--radius);box-shadow:var(--shadow)}
+.about-photos figure img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.about-photos figure:hover img{transform:scale(1.06)}
+.ap1{inset:0 22% 18% 0}
+.ap2{inset:46% 0 0 38%;border:6px solid var(--paper)}
+.about-badge{position:absolute;left:-10px;bottom:6%;background:var(--ember);color:#fff;padding:14px 18px;border-radius:16px;display:flex;gap:10px;align-items:center;font-weight:700;box-shadow:var(--shadow);z-index:2}
+.about-text h2{font-size:clamp(2rem,4.2vw,3.2rem);color:var(--pine);font-weight:800;margin:10px 0 18px}
+.about-text p{color:#3d4239;margin-bottom:16px}
+.perks{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+.perk{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:14px;background:#fff;border:1px solid var(--line);transition:transform .3s var(--ease),border-color .3s}
+.perk:hover{transform:translateY(-3px);border-color:var(--fern)}
+.perk i{color:var(--moss);font-size:1.15rem;margin-top:3px;width:20px;text-align:center}
+.perk strong{display:block;font-size:.95rem;color:var(--pine)}
+.perk span{font-size:.85rem;color:var(--stone)}
+
+/* SITES EXPLORER */
+.sites{background:var(--pine);color:#fff;border-radius:40px;margin-inline:clamp(0px,1.5vw,20px)}
+.sites .section-head h2{color:#fff}
+.sites .section-head p{color:rgba(255,255,255,.72)}
+.explorer{display:grid;grid-template-columns:320px 1fr;gap:28px}
+.site-tabs{display:flex;flex-direction:column;gap:8px}
+.site-tab{display:flex;align-items:center;gap:14px;text-align:left;width:100%;padding:16px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#fff;cursor:pointer;transition:background .3s,border-color .3s,transform .3s var(--ease)}
+.site-tab:hover{background:rgba(255,255,255,.09);transform:translateX(4px)}
+.site-tab[aria-selected="true"]{background:#fff;color:var(--pine);border-color:#fff}
+.site-tab .ti{width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;background:rgba(242,165,65,.18);color:var(--amber);font-size:1.05rem;transition:background .3s,color .3s}
+.site-tab[aria-selected="true"] .ti{background:var(--ember);color:#fff}
+.site-tab strong{display:block;font-family:'Bricolage Grotesque';font-size:1.08rem}
+.site-tab small{opacity:.7;font-size:.82rem}
+.site-panel{display:grid;grid-template-columns:1.25fr 1fr;gap:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:16px}
+.sp-media{display:grid;gap:10px;grid-template-rows:1fr auto}
+.sp-main{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;cursor:zoom-in;background:var(--pine-deep)}
+.sp-main img{width:100%;height:100%;object-fit:cover;transition:opacity .45s,transform .8s var(--ease)}
+.sp-main:hover img{transform:scale(1.04)}
+.sp-main .zoom{position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:12px;background:rgba(19,38,29,.65);display:grid;place-items:center;backdrop-filter:blur(4px)}
+.sp-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sp-thumbs button{border:2px solid transparent;border-radius:12px;overflow:hidden;padding:0;cursor:pointer;aspect-ratio:16/10;background:none;opacity:.6;transition:opacity .3s,border-color .3s}
+.sp-thumbs button:hover{opacity:1}
+.sp-thumbs button.on{opacity:1;border-color:var(--amber)}
+.sp-thumbs img{width:100%;height:100%;object-fit:cover}
+.sp-info{padding:12px 10px 10px;display:flex;flex-direction:column}
+.sp-type{display:inline-flex;gap:8px;align-items:center;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+.sp-info h3{font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:800;margin:8px 0 6px}
+.sp-rating{display:flex;gap:8px;align-items:center;font-size:.9rem;color:rgba(255,255,255,.8);margin-bottom:14px}
+.sp-rating i{color:var(--amber)}
+.sp-info p{color:rgba(255,255,255,.82);font-size:.96rem;margin-bottom:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;font-size:.82rem;font-weight:600;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.chip i{color:var(--fern);font-size:.8rem}
+.chip.no i{color:#e8a08a}
+.chip.alert{background:rgba(226,104,60,.18);border-color:rgba(226,104,60,.45)}
+.chip.alert i{color:var(--amber)}
+.sp-info .btn{margin-top:auto;align-self:flex-start}
+.fade-swap{animation:swap .5s var(--ease)}
+@keyframes swap{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px}
+.g-item{position:relative;border-radius:var(--radius);overflow:hidden;cursor:zoom-in;border:0;padding:0;background:var(--mist)}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.g-item::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(19,38,29,.7),transparent 55%);opacity:.75;transition:opacity .4s}
+.g-item span{position:absolute;left:16px;bottom:14px;z-index:1;color:#fff;font-weight:700;font-size:.95rem;display:flex;gap:8px;align-items:center;transform:translateY(4px);transition:transform .4s var(--ease)}
+.g-item:hover img{transform:scale(1.07)}
+.g-item:hover::after{opacity:1}
+.g-item:hover span{transform:none}
+.g1{grid-column:span 2;grid-row:span 2}
+.g2{grid-column:span 2}
+
+/* REVIEWS */
+.reviews-top{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-bottom:36px}
+.score{display:flex;align-items:center;gap:20px;padding:22px 28px;border-radius:24px;background:var(--mist)}
+.score .big{font-family:'Bricolage Grotesque';font-size:3.6rem;font-weight:800;color:var(--ember);line-height:1}
+.score small{display:block;color:var(--stone);font-size:.88rem}
+.score strong{color:var(--pine);font-size:1.05rem}
+.review-ctrl{display:flex;gap:10px;justify-self:end}
+.review-ctrl button{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--pine);cursor:pointer;transition:background .3s,color .3s,transform .3s}
+.review-ctrl button:hover{background:var(--pine);color:#fff;transform:scale(1.06)}
+.review-track{display:grid;grid-auto-flow:column;grid-auto-columns:min(380px,85%);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin}
+.review{scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:14px;transition:transform .35s var(--ease),box-shadow .35s}
+.review:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.review .q{color:var(--ember);font-size:1.4rem}
+.review p{color:#3d4239;font-size:.97rem;flex:1}
+.reviewer{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px}
+.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--fern);color:var(--pine);font-weight:800;font-size:.85rem}
+.reviewer strong{display:block;color:var(--pine);font-size:.95rem}
+.reviewer small{color:var(--stone);font-size:.8rem}
+
+/* HOST + KNOW */
+.host-card{display:grid;grid-template-columns:auto 1fr 300px;gap:clamp(24px,4vw,48px);align-items:center;background:linear-gradient(120deg,var(--dusk),#4b3a52);color:#fff;border-radius:32px;padding:clamp(26px,4vw,48px);position:relative;overflow:hidden}
+.host-card::before{content:"\f185";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:38%;bottom:-70px;font-size:13rem;color:rgba(242,165,65,.08);pointer-events:none}
+.host-photo{position:relative;width:clamp(140px,16vw,190px);aspect-ratio:1}
+.host-photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:5px solid var(--amber);transition:transform .5s var(--ease)}
+.host-photo:hover img{transform:scale(1.04) rotate(-2deg)}
+.host-badge{position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);white-space:nowrap;background:var(--ember);color:#fff;font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:999px;display:flex;gap:6px;align-items:center}
+.host-body h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;margin:8px 0 6px}
+.host-since{display:flex;gap:8px;align-items:center;opacity:.8;font-size:.9rem;margin-bottom:14px}
+.host-since i{color:var(--amber)}
+.host-body p{color:rgba(255,255,255,.88);margin-bottom:22px;max-width:52ch}
+.host-stats{display:grid;gap:10px;position:relative}
+.host-stats div{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 16px;transition:background .3s,transform .3s var(--ease)}
+.host-stats div:hover{background:rgba(255,255,255,.16);transform:translateX(-4px)}
+.host-stats i{width:40px;height:40px;flex:none;border-radius:12px;background:rgba(242,165,65,.18);color:var(--amber);display:grid;place-items:center}
+.host-stats strong{display:block;font-family:'Bricolage Grotesque';font-size:1.1rem;line-height:1.2}
+.host-stats small{font-size:.8rem;opacity:.75}
+.know{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,70px);align-items:start}
+.know-head h2{font-size:clamp(2rem,4.2vw,3.2rem);color:var(--pine);font-weight:800;margin:10px 0 14px}
+.know-head p{color:var(--stone);margin-bottom:22px}
+.know-note{display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:16px;background:var(--mist);color:var(--pine);font-size:.92rem}
+.know-note i{color:var(--ember);margin-top:4px}
+.know-box{background:#fff;border:1px solid var(--line);border-radius:28px;padding:clamp(12px,2.5vw,22px) clamp(18px,3vw,30px)}
+.know-list{list-style:none;display:grid}
+.know-list li{border-bottom:1px solid var(--line)}
+.know-list li:last-child{border:0}
+.know-list button{width:100%;display:flex;align-items:center;gap:14px;padding:16px 4px;border:0;background:none;text-align:left;cursor:pointer;color:var(--pine);font-weight:700;transition:color .25s}
+.know-list button:hover{color:var(--ember)}
+.know-list button i.lead{width:38px;height:38px;flex:none;border-radius:10px;background:var(--mist);display:grid;place-items:center;color:var(--ember);transition:background .25s,color .25s}
+.know-list li.open i.lead{background:var(--ember);color:#fff}
+.know-list button .tog{margin-left:auto;transition:transform .35s var(--ease);color:var(--stone)}
+.know-list li.open .tog{transform:rotate(45deg)}
+.know-ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.know-ans>div{overflow:hidden}
+.know-ans p{padding:0 4px 16px 56px;color:var(--stone);font-size:.94rem}
+.know-list li.open .know-ans{grid-template-rows:1fr}
+
+/* BOOKING */
+.book{background:var(--mist)}
+.book-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(24px,5vw,60px);align-items:start}
+.book-side h2{font-size:clamp(2.2rem,4.6vw,3.6rem);color:var(--pine);font-weight:800;margin:10px 0 16px}
+.book-side>p{color:var(--stone);margin-bottom:24px}
+.steps{list-style:none;display:grid;gap:14px;margin-bottom:28px}
+.steps li{display:flex;gap:14px;align-items:flex-start}
+.steps b{width:34px;height:34px;flex:none;border-radius:50%;background:var(--pine);color:#fff;display:grid;place-items:center;font-size:.9rem}
+.steps span{color:#3d4239;padding-top:5px}
+.book-pic{display:flex;gap:16px;align-items:flex-start;padding:22px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);transition:transform .3s var(--ease),box-shadow .3s}
+.book-pic:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.book-pic i{width:48px;height:48px;flex:none;border-radius:14px;background:var(--ember);color:#fff;display:grid;place-items:center;font-size:1.2rem}
+.book-pic strong{display:block;color:var(--pine);font-family:'Bricolage Grotesque';font-size:1.15rem;margin-bottom:4px}
+.book-pic span{color:var(--stone);font-size:.93rem}
+.form{background:#fff;border-radius:28px;padding:clamp(22px,4vw,40px);box-shadow:var(--shadow);position:relative}
+.form h3{font-size:1.5rem;color:var(--pine);margin-bottom:6px}
+.form>p.sub{color:var(--stone);font-size:.92rem;margin-bottom:22px}
+.form-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+.form-top h3{margin:0}
+.price-tag{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.3rem;color:var(--ember);white-space:nowrap}
+.price-tag small{font-family:'Manrope';font-weight:600;font-size:.75rem;color:var(--stone)}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;min-width:0}
+.field label,.flabel{font-size:.8rem;font-weight:700;color:var(--pine)}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--paper);color:var(--ink);transition:border-color .25s,box-shadow .25s;min-height:48px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--moss);box-shadow:0 0 0 4px rgba(91,122,82,.15)}
+.field.bad input{border-color:#c43d2b}
+.err{color:#c43d2b;font-size:.76rem}
+.err:empty{display:none}
+.select-wrap{position:relative}
+.select-wrap select{appearance:none;-webkit-appearance:none;padding-left:46px;padding-right:40px;font-weight:700;color:var(--pine);cursor:pointer}
+.select-wrap .lead-ic{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:8px;background:var(--ember);color:#fff;display:grid;place-items:center;font-size:.75rem;pointer-events:none}
+.select-wrap .chev{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--stone);font-size:.8rem;pointer-events:none}
+.site-meta{display:flex;flex-wrap:wrap;gap:6px}
+.site-meta span{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:600;color:var(--pine);background:var(--mist);padding:4px 10px;border-radius:999px;animation:swap .35s var(--ease)}
+.site-meta span i{color:var(--moss)}
+.site-meta span.warn{background:#fff1e8;color:#8a3b1d}
+.site-meta span.warn i{color:var(--ember)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row3{display:grid;grid-template-columns:1fr 1fr 140px;gap:12px}
+.stepper{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);overflow:hidden;min-height:48px}
+.stepper button{width:40px;align-self:stretch;border:0;background:none;color:var(--pine);cursor:pointer;transition:background .2s}
+.stepper button:hover{background:var(--mist)}
+.stepper output{flex:1;text-align:center;font-weight:700;color:var(--pine)}
+.more-btn{display:flex;align-items:center;gap:12px;width:100%;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);color:var(--pine);font-weight:700;font-size:.9rem;cursor:pointer;padding:11px 14px;text-align:left;transition:border-color .25s,background .25s}
+.more-btn:hover{border-color:var(--fern)}
+.more-btn small{color:var(--stone);font-weight:500}
+.sw{position:relative;width:44px;height:24px;flex:none;border-radius:999px;background:#d6d1c4;transition:background .3s var(--ease)}
+.sw .knob{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .3s var(--ease)}
+.more-btn[aria-checked="true"]{border-color:var(--ember);background:#fff4ee}
+.more-btn[aria-checked="true"] .sw{background:var(--ember)}
+.more-btn[aria-checked="true"] .sw .knob{transform:translateX(20px)}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.more>div{overflow:hidden}
+.more.open{grid-template-rows:1fr}
+.more.open>div{padding-top:10px}
+.tog-pill{position:relative;cursor:pointer}
+.tog-pill input{position:absolute;opacity:0;min-height:0!important}
+.tog-pill span{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);font-size:.9rem;font-weight:600;color:var(--pine);transition:all .25s}
+.tog-pill input:checked+span{background:var(--pine);color:#fff;border-color:var(--pine)}
+.tog-pill input:focus-visible+span{outline:3px solid var(--amber);outline-offset:2px}
+.notice{display:none;gap:10px;align-items:flex-start;padding:11px 14px;border-radius:12px;font-size:.85rem;margin:8px 0 0;background:#fff4ee;color:#8a3b1d;border:1px solid rgba(226,104,60,.35)}
+.notice.show{display:flex;animation:swap .4s var(--ease)}
+.notice i{margin-top:3px}
+.notice.info{background:#eef3ea;color:var(--pine);border-color:rgba(91,122,82,.35)}
+.form-foot{display:flex;gap:12px;align-items:stretch;margin-top:16px}
+.summary{flex:1;display:flex;align-items:center;gap:12px;padding:10px 16px;border-radius:14px;background:var(--pine);color:#fff;min-width:0}
+.summary>i{color:var(--amber)}
+.summary small{opacity:.75;display:block;font-size:.74rem}
+.summary strong{font-family:'Bricolage Grotesque';font-size:1.05rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.form-foot .btn{border-radius:14px;padding:0 24px;white-space:nowrap}
+.fine{display:flex;gap:8px;align-items:center;justify-content:center;font-size:.78rem;color:var(--stone);margin-top:12px}
+.fine i{color:var(--moss)}
+.done{position:absolute;inset:0;border-radius:28px;background:#fff;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;gap:14px}
+.done.show{display:flex;animation:swap .5s var(--ease)}
+.done i.big{width:80px;height:80px;border-radius:50%;background:#eef3ea;color:var(--moss);display:grid;place-items:center;font-size:2rem}
+.done h3{font-size:1.8rem;color:var(--pine)}
+.done p{color:var(--stone);max-width:36ch}
+
+/* FOOTER */
+footer{background:var(--pine-deep);color:rgba(255,255,255,.78);padding:70px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer .logo{color:#fff;margin-bottom:14px}
+footer h4{color:#fff;font-size:1.05rem;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:9px}
+footer ul a{text-decoration:none;transition:color .25s,padding .25s}
+footer ul a:hover{color:var(--amber);padding-left:4px}
+footer li i{color:var(--amber);width:18px}
+.socials{display:flex;gap:10px;margin-top:18px}
+.socials a{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.08);transition:background .3s,transform .3s}
+.socials a:hover{background:var(--ember);transform:translateY(-3px)}
+.copy{text-align:center;padding-top:24px;font-size:.88rem}
+
+/* MOBILE BOOK BAR */
+.mbar{display:none}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,20,15,.94);display:none;align-items:center;justify-content:center;padding:20px}
+.lb.open{display:flex;animation:fadein .3s}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.lb img{max-width:min(1200px,100%);max-height:82vh;border-radius:14px;object-fit:contain}
+.lb-cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#fff;font-weight:600}
+.lb button{position:absolute;width:50px;height:50px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:1.1rem;cursor:pointer;transition:background .25s}
+.lb button:hover{background:var(--ember)}
+.lb-close{top:20px;right:20px}
+.lb-prev{left:20px;top:50%;transform:translateY(-50%)}
+.lb-next{right:20px;top:50%;transform:translateY(-50%)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media (max-width:1024px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-meta{justify-self:start;grid-template-columns:repeat(3,1fr);width:100%}
+  .meta-card{flex-direction:column;align-items:flex-start;gap:10px}
+  .quick form{grid-template-columns:1fr 1fr}
+  .quick .btn{grid-column:1/-1}
+  .explorer{grid-template-columns:1fr}
+  .site-tabs{flex-direction:row;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+  .site-tab{min-width:220px}
+  .site-tab:hover{transform:none}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .nav-links{position:fixed;inset:0 0 0 auto;width:min(320px,85%);flex-direction:column;align-items:stretch;background:var(--paper);padding:90px 22px 22px;transform:translateX(100%);transition:transform .45s var(--ease);box-shadow:-20px 0 40px rgba(0,0,0,.2)}
+  .nav-links.open{transform:none}
+  .nav-links a{color:var(--pine)!important;padding:14px 16px;font-size:1.05rem}
+  .nav-links .btn{margin-top:10px}
+  .burger{display:grid;place-items:center;position:relative;z-index:2}
+  .burger.open{background:var(--mist);color:var(--pine)}
+  .about-grid,.site-panel,.book-grid,.know{grid-template-columns:1fr}
+  .host-card{grid-template-columns:auto 1fr}
+  .host-stats{grid-column:1/-1;grid-template-columns:repeat(3,1fr)}
+  .compass{grid-template-columns:1fr;text-align:center}
+  .dir,.dir.east{justify-content:center;text-align:center}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .g1{grid-column:span 2;grid-row:span 1}
+  .g2{grid-column:span 2}
+  .reviews-top{grid-template-columns:1fr}
+  .review-ctrl{justify-self:start}
+  .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;align-items:center;justify-content:space-between;gap:12px;padding:10px 10px 10px 18px;border-radius:18px;background:var(--pine);color:#fff;box-shadow:var(--shadow);transform:translateY(140%);transition:transform .4s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar small{display:block;opacity:.75;font-size:.75rem}
+  .mbar strong{font-family:'Bricolage Grotesque'}
+  .mbar .btn{padding:12px 18px}
+  footer{padding-bottom:100px}
+}
+@media (max-width:560px){
+  .hero-inner{padding:130px 0 120px}
+  .hero-meta{grid-template-columns:1fr}
+  .meta-card{flex-direction:row;align-items:center}
+  .quick form{grid-template-columns:1fr}
+  .perks,.row{grid-template-columns:1fr}
+  .row3{grid-template-columns:1fr 1fr}
+  .row3 .field:last-child{grid-column:1/-1}
+  .form-foot{flex-direction:column}
+  .form-foot .btn{padding:15px}
+  .form-top{flex-wrap:wrap}
+  .host-card{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .host-since{justify-content:center}
+  .host-stats{grid-template-columns:1fr;width:100%;text-align:left}
+  .site-pick .opt{padding:12px}
+  .site-pick .opt-tx small{display:none}
+  .foot-grid{grid-template-columns:1fr}
+  .lb-prev,.lb-next{top:auto;bottom:70px;transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo"><i class="fa-solid fa-sun"></i>Sunset Ridge</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i class="fa-solid fa-bars"></i></button>
+    <ul class="nav-links" id="menu">
+      <li><a href="#about">The Land</a></li>
+      <li><a href="#sites">Sites</a></li>
+      <li><a href="#gallery">Photos</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#host">Your Host</a></li>
+      <li><a href="#info">Good to Know</a></li>
+      <li><a href="#book" class="btn"><i class="fa-solid fa-calendar-check"></i>Book a Stay</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-img">
+    <img src="https://dxynby2r8cy0b.cloudfront.net/images/c_limit,f_auto,h_1200,q_70,w_1920/v1687712977/land-photos/vc7noqbeuagjyugjx8ge/sunset-ridge-2-alderwood-family-pacific-northwest.jpg" alt="Forested ridge at Sunset Ridge overlooking the North Whatcom Valley" fetchpriority="high">
+  </div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow" style="color:var(--amber)"><i class="fa-solid fa-location-dot"></i>Geneva, Bellingham, Washington</span>
+      <h1>Sunset<span>Ridge</span></h1>
+      <p class="hero-lead">Thirty forested acres high above the North Whatcom Valley. Pitch a tent, settle into a vintage trailer or hide away in an A-frame, and watch the sun drop over the valley every evening.</p>
+      <div class="hero-cta">
+        <a href="#book" class="btn btn-ember"><i class="fa-solid fa-campground"></i>Check Availability</a>
+        <a href="#sites" class="btn btn-ghost"><i class="fa-regular fa-compass"></i>Explore the 5 Sites</a>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-card"><i class="fa-solid fa-thumbs-up"></i><div><strong>100% recommend</strong><small>from 93 guest reviews</small></div></div>
+      <div class="meta-card"><i class="fa-solid fa-mountain-sun"></i><div><strong>30 acres</strong><small>trails, views and privacy</small></div></div>
+      <div class="meta-card"><i class="fa-solid fa-city"></i><div><strong>15 min</strong><small>to downtown Bellingham</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK BAR -->
+<div class="quick">
+  <div class="wrap">
+    <form id="quickForm" aria-label="Quick availability check">
+      <div class="q-field">
+        <label for="qSite"><i class="fa-solid fa-tent"></i>Site</label>
+        <select id="qSite"></select>
+      </div>
+      <div class="q-field">
+        <label for="qIn"><i class="fa-regular fa-calendar"></i>Check in</label>
+        <input type="date" id="qIn">
+      </div>
+      <div class="q-field">
+        <label for="qOut"><i class="fa-regular fa-calendar"></i>Check out</label>
+        <input type="date" id="qOut">
+      </div>
+      <div class="q-field">
+        <label for="qGuests"><i class="fa-solid fa-user-group"></i>Guests</label>
+        <select id="qGuests"></select>
+      </div>
+      <button class="btn btn-ember" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Check</button>
+    </form>
+  </div>
+</div>
+
+<!-- VIEW BAND -->
+<section class="viewband">
+  <div class="wrap">
+    <div class="compass reveal">
+      <div class="dir"><i class="fa-solid fa-water"></i><div><small>Look west</small><strong>The ocean on the horizon</strong></div></div>
+      <div class="compass-mid"><i class="fa-regular fa-compass"></i><p>One ridge, views in both directions</p></div>
+      <div class="dir east"><div><small>Look east</small><strong>Twin Sisters &amp; Mount Baker</strong></div><i class="fa-solid fa-mountain"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photos reveal">
+      <figure class="ap1"><img src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1000,q_auto/v1693290817/campground-photos/dyv7rmzemalgunrczbpv/sunset-ridge-2-sunset-ridge-trailer-pacific-northwest.jpg" alt="Sunset Ridge site view" loading="lazy"></figure>
+      <figure class="ap2"><img src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_800,q_auto/v1693291202/campground-photos/xyew24xzq2puxvebuwoj/sunset-ridge-2-sunset-ridge-trailer-pacific-northwest.jpg" alt="Campfire set up for guests at the trailer site" loading="lazy"></figure>
+      <div class="about-badge"><i class="fa-solid fa-award"></i>Star Host &amp; staff verified</div>
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow"><i class="fa-solid fa-leaf"></i>The land</span>
+      <h2>Remote feeling, right above town.</h2>
+      <p>Sunset Ridge sits on a forested hillside with nearly 800 feet of elevation to explore. Hang a hammock in the shade, wander the trails on foot or by bike, and find a rock to sit on while the valley turns gold.</p>
+      <p>Guests keep saying the same thing: it feels completely tucked away, yet Bellingham's food, lakes and famous mountain bike trails are only a short drive down the hill.</p>
+      <div class="perks">
+        <div class="perk"><i class="fa-solid fa-person-biking"></i><div><strong>Trails on site</strong><span>Walk or ride from your camp</span></div></div>
+        <div class="perk"><i class="fa-solid fa-fire"></i><div><strong>Firewood provided</strong><span>Unless a fire ban is on</span></div></div>
+        <div class="perk"><i class="fa-solid fa-paw"></i><div><strong>Pet friendly</strong><span>At 4 of the 5 sites</span></div></div>
+        <div class="perk"><i class="fa-solid fa-children"></i><div><strong>Family friendly</strong><span>Big group sites available</span></div></div>
+        <div class="perk"><i class="fa-solid fa-seedling"></i><div><strong>Blackberry picking</strong><span>In season, all over the land</span></div></div>
+        <div class="perk"><i class="fa-solid fa-tree"></i><div><strong>North Cascades</strong><span>Within an hour's drive</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SITES -->
+<section class="section sites" id="sites">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="eyebrow" style="color:var(--amber)"><i class="fa-solid fa-map-pin"></i>Five private sites</span><h2>Pick your spot on the ridge.</h2></div>
+      <p>Every site is spread out for privacy and has its own fire pit and valley view. Tap a site to see photos and details.</p>
+    </div>
+    <div class="explorer reveal">
+      <div class="site-tabs" role="tablist" aria-label="Campsites" id="siteTabs"></div>
+      <div class="site-panel" role="tabpanel" id="sitePanel" aria-live="polite">
+        <div class="sp-media">
+          <div class="sp-main" id="spMain" tabindex="0" role="button" aria-label="Open photo full screen">
+            <img id="spImg" src="" alt="">
+            <span class="zoom"><i class="fa-solid fa-expand"></i></span>
+          </div>
+          <div class="sp-thumbs" id="spThumbs"></div>
+        </div>
+        <div class="sp-info" id="spInfo"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="eyebrow"><i class="fa-solid fa-camera"></i>Around the ridge</span><h2>See it before you go.</h2></div>
+      <p>A closer look at the land, the trailer and the cozy corners guests love. Click any photo to enlarge.</p>
+    </div>
+    <div class="gallery reveal" id="gallery-grid">
+      <button class="g-item g1" data-cap="Settle in under the trees"><img src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1200,q_auto/v1693291783/campground-photos/hg6njsfii8eo3zh7hc6a/sunset-ridge-2-sunset-ridge-trailer-pacific-northwest.jpg" alt="Camp spot on the ridge" loading="lazy"><span><i class="fa-solid fa-expand"></i>Settle in under the trees</span></button>
+      <button class="g-item g2" data-cap="Space to spread out"><img src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1000,q_auto/v1693292296/campground-photos/ka5iujbbrixgmb4sdd69/sunset-ridge-2-alderwood-family-pacific-northwest.jpg" alt="Wooded campsite with space for tents" loading="lazy"><span><i class="fa-solid fa-expand"></i>Space to spread out</span></button>
+      <button class="g-item g2" data-cap="Shaums helping guests set up camp"><img src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1000,q_auto/v1693292298/campground-photos/plqrlwfjfgf7otth5aut/sunset-ridge-2-alderwood-family-pacific-northwest.jpg" alt="Host helping guests set up a tent site" loading="lazy"><span><i class="fa-solid fa-expand"></i>A host who helps you settle in</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section" id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-bottom:24px">
+      <div><span class="eyebrow"><i class="fa-solid fa-heart"></i>Guest stories</span><h2>Campers keep coming back.</h2></div>
+    </div>
+    <div class="reviews-top reveal">
+      <div class="score"><div class="big">100%</div><div><strong>of guests recommend</strong><small>112 ratings · 93 written reviews</small></div></div>
+      <div class="review-ctrl"><button id="revPrev" aria-label="Previous reviews"><i class="fa-solid fa-arrow-left"></i></button><button id="revNext" aria-label="Next reviews"><i class="fa-solid fa-arrow-right"></i></button></div>
+    </div>
+    <div class="review-track reveal" id="reviewTrack"></div>
+  </div>
+</section>
+
+<!-- HOST -->
+<section class="section" id="host" style="padding-top:0">
+  <div class="wrap">
+    <div class="host-card reveal">
+      <div class="host-photo">
+        <img src="https://dxynby2r8cy0b.cloudfront.net/image/upload/c_fill,f_auto,h_320,w_320/v1688224056/profile/udoqyvqm4x9ns8qui3r6.jpg" alt="Shaums, host of Sunset Ridge" loading="lazy">
+        <span class="host-badge"><i class="fa-solid fa-star"></i>Star Host</span>
+      </div>
+      <div class="host-body">
+        <span class="eyebrow" style="color:var(--amber)"><i class="fa-solid fa-hand"></i>Meet your host</span>
+        <h2>Shaums M.</h2>
+        <small class="host-since"><i class="fa-solid fa-house-flag"></i>Hosting at Sunset Ridge since 2023</small>
+        <p>Shaums lives on the property, greets most guests on arrival and is happy to show you around. He is also a well known local mountain biker, so ask him about the best trails in Bellingham.</p>
+        <a href="#book" class="btn btn-ember"><i class="fa-solid fa-paper-plane"></i>Send Shaums a request</a>
+      </div>
+      <div class="host-stats">
+        <div><i class="fa-solid fa-reply"></i><span><strong>100%</strong><small>Response rate</small></span></div>
+        <div><i class="fa-regular fa-clock"></i><span><strong>Under 1 hour</strong><small>Typical reply time</small></span></div>
+        <div><i class="fa-solid fa-shield-halved"></i><span><strong>Staff verified</strong><small>Land checked on site</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOD TO KNOW -->
+<section class="section" id="info" style="padding-top:0">
+  <div class="wrap know">
+    <div class="know-head reveal">
+      <span class="eyebrow"><i class="fa-solid fa-circle-info"></i>Good to know</span>
+      <h2>Before you arrive</h2>
+      <p>Quick answers to the questions guests ask most. Tap a question to open it.</p>
+      <div class="know-note"><i class="fa-solid fa-message"></i><span>Still have a question? Add it to your booking request and Shaums will reply within the hour.</span></div>
+    </div>
+    <div class="know-box reveal">
+      <ul class="know-list" id="know">
+        <li><button aria-expanded="false"><i class="fa-solid fa-car-side lead"></i>Getting up the hill<i class="fa-solid fa-plus tog"></i></button><div class="know-ans"><div><p>Alderwood and Cottonwood Cabin need an AWD or 4x4 vehicle (or you can hike in to the cabin). Dogwood and Cedarwood recommend one. Avoid low clearance cars, the access tracks are bumpy.</p></div></div></li>
+        <li><button aria-expanded="false"><i class="fa-solid fa-location-dot lead"></i>Where exactly is it?<i class="fa-solid fa-plus tog"></i></button><div class="know-ans"><div><p>Geneva, Whatcom County, about 15 minutes from downtown Bellingham. The exact address and directions are shared once your booking is confirmed.</p></div></div></li>
+        <li><button aria-expanded="false"><i class="fa-solid fa-restroom lead"></i>Toilets, water and showers<i class="fa-solid fa-plus tog"></i></button><div class="know-ans"><div><p>Every site has a toilet nearby and potable water. Showers are available at the Sunset Ridge Trailer only.</p></div></div></li>
+        <li><button aria-expanded="false"><i class="fa-solid fa-ear-listen lead"></i>Is it quiet?<i class="fa-solid fa-plus tog"></i></button><div class="know-ans"><div><p>Very peaceful during the day. Light sleepers may notice a faint hum from the highway late at night, so pack earplugs just in case.</p></div></div></li>
+        <li><button aria-expanded="false"><i class="fa-solid fa-person-swimming lead"></i>Things to do nearby<i class="fa-solid fa-plus tog"></i></button><div class="know-ans"><div><p>Paddleboard on Lake Whatcom or Toad Lake, ride Bellingham's mountain bike trails, explore the food trucks in town, or day trip to North Cascades National Park.</p></div></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section book" id="book">
+  <div class="wrap book-grid">
+    <div class="book-side reveal">
+      <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i>Reserve your stay</span>
+      <h2>Your sunset is waiting.</h2>
+      <p>Send a booking request and Shaums usually replies within the hour to confirm your dates.</p>
+      <ol class="steps">
+        <li><b>1</b><span>Choose a site, your dates and how many are coming.</span></li>
+        <li><b>2</b><span>Send the request. No payment is taken yet.</span></li>
+        <li><b>3</b><span>Get your confirmation, directions and arrival tips.</span></li>
+      </ol>
+      <div class="book-pic"><i class="fa-solid fa-mug-hot"></i><div><strong>Not sure which site fits?</strong><span>Add a note to your request and Shaums will suggest the best spot for your group and vehicle.</span></div></div>
+    </div>
+
+    <form class="form reveal" id="bookForm" novalidate>
+      <div class="form-top">
+        <h3>Booking request</h3>
+        <span class="price-tag"><small>From</small> $58.50<small>/night</small></span>
+      </div>
+
+      <div class="field">
+        <label for="bSite">Site</label>
+        <div class="select-wrap"><i class="fa-solid fa-tent lead-ic" id="bSiteIc"></i><select id="bSite"></select><i class="fa-solid fa-chevron-down chev"></i></div>
+        <div class="site-meta" id="siteMeta"></div>
+      </div>
+
+      <div class="row3">
+        <div class="field" id="fIn"><label for="bIn">Check in</label><input type="date" id="bIn" required><span class="err"></span></div>
+        <div class="field" id="fOut"><label for="bOut">Check out</label><input type="date" id="bOut" required><span class="err"></span></div>
+        <div class="field"><label id="gLbl">Guests</label>
+          <div class="stepper" role="group" aria-labelledby="gLbl"><button type="button" id="gMinus" aria-label="Fewer guests"><i class="fa-solid fa-minus"></i></button><output id="gOut">2</output><button type="button" id="gPlus" aria-label="More guests"><i class="fa-solid fa-plus"></i></button></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field" id="fName"><label for="bName">Full name</label><input type="text" id="bName" autocomplete="name" placeholder="Your name" required><span class="err"></span></div>
+        <div class="field" id="fEmail"><label for="bEmail">Email</label><input type="email" id="bEmail" autocomplete="email" placeholder="you@email.com" required><span class="err"></span></div>
+      </div>
+
+      <button type="button" class="more-btn" id="moreBtn" role="switch" aria-checked="false" aria-controls="more"><span class="sw" aria-hidden="true"><span class="knob"></span></span><span class="sw-txt">Add vehicle, pets or a note <small>(optional)</small></span></button>
+      <div class="more" id="more">
+        <div>
+          <div class="row">
+            <div class="field" id="fRig"><label for="bRig">Vehicle / rig length (ft)</label><input type="number" id="bRig" min="0" max="60" placeholder="Blank if tent only"><span class="err"></span></div>
+            <div class="field"><span class="flabel">Pets</span><label class="tog-pill"><input type="checkbox" id="bPets"><span><i class="fa-solid fa-dog"></i>Bringing pets</span></label></div>
+          </div>
+          <div class="field"><label for="bMsg">Message for Shaums</label><textarea id="bMsg" rows="2" placeholder="Arrival time, questions, special requests"></textarea></div>
+        </div>
+      </div>
+
+      <div class="notice" id="noticeSite"><i class="fa-solid fa-triangle-exclamation"></i><span></span></div>
+      <div class="notice" id="noticePets"><i class="fa-solid fa-paw"></i><span>The Sunset Ridge Trailer does not allow pets. Every other site welcomes them.</span></div>
+
+      <div class="form-foot">
+        <div class="summary"><i class="fa-regular fa-calendar"></i><div><small id="sumSite">Alderwood</small><strong id="sumText">Pick your dates</strong></div></div>
+        <button class="btn btn-ember" type="submit"><i class="fa-solid fa-paper-plane"></i>Send Request</button>
+      </div>
+      <p class="fine"><i class="fa-solid fa-lock"></i>No payment now. Shaums confirms by email, usually within the hour.</p>
+
+      <div class="done" id="done" role="status">
+        <i class="fa-solid fa-check big"></i>
+        <h3>Request sent!</h3>
+        <p id="doneText">Shaums will reply by email shortly to confirm your stay.</p>
+        <button type="button" class="btn btn-ember" id="again" style="width:auto"><i class="fa-solid fa-rotate-left"></i>Make another request</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a href="#top" class="logo"><i class="fa-solid fa-sun"></i>Sunset Ridge</a>
+      <p>Ridgetop camping, a vintage trailer and an A-frame cabin on 30 acres above the North Whatcom Valley.</p>
+      <div class="socials"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#book" aria-label="Book a stay"><i class="fa-solid fa-calendar-check"></i></a></div>
+    </div>
+    <div><h4>Explore</h4><ul><li><a href="#about">The Land</a></li><li><a href="#sites">Campsites</a></li><li><a href="#gallery">Photos</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#info">Good to Know</a></li></ul></div>
+    <div><h4>Stay</h4><ul><li><a href="#sites" data-go="alderwood">Alderwood</a></li><li><a href="#sites" data-go="dogwood">Dogwood</a></li><li><a href="#sites" data-go="cedarwood">Cedarwood</a></li><li><a href="#sites" data-go="trailer">Sunset Ridge Trailer</a></li><li><a href="#sites" data-go="cabin">Cottonwood Cabin</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li><i class="fa-solid fa-location-dot"></i> Geneva, Whatcom County, WA</li><li><i class="fa-solid fa-user"></i> Hosted by Shaums M.</li><li><i class="fa-regular fa-clock"></i> Replies within an hour</li><li><a href="#book"><i class="fa-solid fa-envelope"></i> Send a booking request</a></li></ul></div>
+  </div>
+  <div class="wrap copy">© <span id="yr"></span> Sunset Ridge. All rights reserved.</div>
+</footer>
+
+<!-- MOBILE BOOK BAR -->
+<div class="mbar" id="mbar"><div><small>From</small><strong>$58.50 / night</strong></div><a href="#book" class="btn btn-ember"><i class="fa-solid fa-calendar-check"></i>Book now</a></div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lb-prev" id="lbPrev" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" id="lbNext" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script>
+const CDN = 'https://dxynby2r8cy0b.cloudfront.net/';
+const img = (path, w=1200) => CDN + path.replace('{w}', 'f_auto,c_limit,w_' + w + ',q_auto');
+
+const SITES = [
+  {id:'alderwood', name:'Alderwood', type:'Family tent site', icon:'fa-tent', sleeps:10, rig:null, rating:'100%', reviews:23, pets:true, wd:'required',
+   desc:'A double size, shaded lot made for families and small groups. Two tent pads, a fire pit and picnic table, a window view of the valley and plenty of room for camp games.',
+   feats:[['fa-users','Sleeps 10'],['fa-fire','Fire pit'],['fa-table','Picnic table'],['fa-droplet','Potable water'],['fa-toilet','Toilet'],['fa-paw','Pets allowed'],['fa-shower','No showers','no'],['fa-truck-monster','AWD / 4x4 required','alert']],
+   imgs:['images/{w}/v1719002915/dev-campground-photos/worzioebo3zm9wfcsrcy/sunset-ridge-2-alderwood-family-pacific-northwest.jpg','images/{w}/v1693292298/campground-photos/v7sa7646w1khvkbruskn/sunset-ridge-2-alderwood-family-pacific-northwest.jpg','images/{w}/v1693292299/campground-photos/b6ic57xfpdbitd6v5gw6/sunset-ridge-2-alderwood-family-pacific-northwest.jpg']},
+  {id:'dogwood', name:'Dogwood', type:'Tent or small rig', icon:'fa-caravan', sleeps:4, rig:15, rating:'100%', reviews:31, pets:true, wd:'recommended',
+   desc:'A romantic spot for two to four. Picnic table, fire pit and a window view over the valley, perfect for watching the sunset toward the Fraser Valley and the mountains beyond.',
+   feats:[['fa-users','Sleeps 4'],['fa-ruler-horizontal','Rigs under 15 ft'],['fa-fire','Fire pit'],['fa-droplet','Potable water'],['fa-toilet','Toilet'],['fa-paw','Pets allowed'],['fa-plug','No hookups','no'],['fa-car-side','AWD recommended','alert']],
+   imgs:['images/{w}/v1719236817/campground-photos/m7mutzswegdfah3bxxq4/sunset-ridge-2-dogwood-single-tent-camping-pacific-northwest.jpg','images/{w}/v1719236809/campground-photos/tqtvqh0wr6opyqntjfmj/sunset-ridge-2-dogwood-single-tent-camping-pacific-northwest.jpg']},
+  {id:'cedarwood', name:'Cedarwood', type:'Family tent platforms', icon:'fa-people-roof', sleeps:12, rig:18, rating:'98%', reviews:28, pets:true, wd:'recommended',
+   desc:'Our biggest site, with two raised tent platforms, a fire pit and table, and a valley view. Lush and private, and a favourite with families and groups of friends.',
+   feats:[['fa-users','Sleeps 12'],['fa-ruler-horizontal','Rigs under 18 ft'],['fa-layer-group','2 tent platforms'],['fa-fire','Fire pit'],['fa-droplet','Potable water'],['fa-paw','Pets allowed'],['fa-plug','No hookups','no'],['fa-car-side','AWD recommended','alert']],
+   imgs:['images/{w}/v1719236802/campground-photos/qn3jt85wxymfu4ej7g8q/sunset-ridge-2-cedarwood-family-tent-platform-pacific-northwest.jpg','images/{w}/v1719236804/campground-photos/ofq7ryhictg1thcih76g/sunset-ridge-2-cedarwood-family-tent-platform-pacific-northwest.jpg']},
+  {id:'trailer', name:'Sunset Ridge Trailer', type:'Vintage 5th wheel', icon:'fa-trailer', sleeps:3, rig:null, rating:'100%', reviews:21, pets:false, wd:null,
+   desc:'A classic 80s fifth wheel with big bright windows, a queen bed and a couch bed. Power, WiFi, a shower and linens are ready for you, plus a private sitting area and campfire overlooking the valley.',
+   feats:[['fa-bed','Queen + couch bed'],['fa-wifi','WiFi'],['fa-bolt','Power'],['fa-shower','Shower'],['fa-fire','Private campfire'],['fa-tent','Room for a small tent'],['fa-ban','No pets','no']],
+   imgs:['images/{w}/v1693289526/campground-photos/rnincxblvtdubg0cjgpb/sunset-ridge-2-sunset-ridge-trailer-pacific-northwest.jpg','images/{w}/v1693289538/campground-photos/zajw2imzg3mfqsnwbqcf/sunset-ridge-2-sunset-ridge-trailer-pacific-northwest.jpg','images/{w}/v1693289536/campground-photos/hfscx6k5gqwwseasvspk/sunset-ridge-2-sunset-ridge-trailer-pacific-northwest.jpg']},
+  {id:'cabin', name:'Cottonwood Cabin', type:'Private A-frame', icon:'fa-house-chimney', sleeps:4, rig:null, rating:'100%', reviews:7, pets:true, wd:'required',
+   desc:'Your own little A-frame with a bug screened front, a sunny private deck and a hammock. Step down to your fire pit and picnic table for stargazing. Firewood supplied. Bring your own bedding.',
+   feats:[['fa-users','Sleeps 4'],['fa-bed','1 bed'],['fa-sun','Deck + hammock'],['fa-fire','Firewood supplied'],['fa-paw','Pets allowed'],['fa-shower','No showers','no'],['fa-truck-monster','AWD / 4x4 or hike in','alert']],
+   imgs:['f_auto,c_limit,w_{W},q_auto/v1752620113/dev-campground-photos/jxshkegngvgfkodnxk2i.jpg','images/{w}/v1747751787/dev-campground-photos/r3xaozrsfefevgfhtcwf/sunset-ridge-2-cottonwood-cabin-pacific-northwest.jpg','images/{w}/v1750044629/dev-campground-photos/jfe2semqovqe8jczilx1/sunset-ridge-2-cottonwood-cabin-pacific-northwest.jpg']}
+];
+const src = (p,w) => p.includes('{W}') ? CDN + p.replace('{W}', w) : img(p,w);
+
+
+const REVIEWS = [
+  ['Bryan N.','Cedarwood · with kids','Sunset Ridge delivered everything we hoped for. Ocean to the west, Twin Sisters and Baker to the east, and only minutes from Bellingham. Firewood and a splitter were ready to go and the kids were happy.'],
+  ['Amanda W.','Cottonwood Cabin','Our second stay on the property. It feels like you are in your own little world. The cabin was perfect and SO private. We will be back.'],
+  ['Clint C.','Sunset Ridge Trailer','A wonderful mountain biking base camp. Cozy camper, incredible views by the fire and an attentive, friendly host who knows the trails better than anyone.'],
+  ['Audrey S.','Cedarwood · group trip','Spacious, lush and private, and the tent platforms were great. Nice being able to head into town during the day and come back to the site at night.'],
+  ['Beth D.','Dogwood','The property is so large you feel secluded in your own private corner with sweeping views of the valley. Blackberries and walking trails were a delightful bonus.'],
+  ['Lisa S.','Cedarwood','The hosts even brought us bug spray we had forgotten! My favourite part was waking up to the chorus of birds echoing through the trees.'],
+  ['Michel V.','Cottonwood Cabin','Cute A-frame for sleeping, deck and hammock for chilling and a fire pit for the evening. The sites are spread out and very private.'],
+  ['Kaylei H.','Cedarwood · with pets','A nice secluded feel, and the fire pit and firewood were a great addition. Shaums checked in on us but it still felt like our own space.']
+];
+
+/* SITE TABS */
+const tabs = document.getElementById('siteTabs');
+const spImg = document.getElementById('spImg');
+const spThumbs = document.getElementById('spThumbs');
+const spInfo = document.getElementById('spInfo');
+let current = 0, curImg = 0;
+
+SITES.forEach((s,i)=>{
+  const b = document.createElement('button');
+  b.className='site-tab'; b.role='tab'; b.id='tab-'+s.id;
+  b.setAttribute('aria-selected', i===0);
+  b.innerHTML = `<span class="ti"><i class="fa-solid ${s.icon}"></i></span><span><strong>${s.name}</strong><small>${s.type} · sleeps ${s.sleeps}</small></span>`;
+  b.addEventListener('click',()=>showSite(i));
+  b.addEventListener('keydown',e=>{
+    if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();showSite((i+1)%SITES.length,true)}
+    if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();showSite((i-1+SITES.length)%SITES.length,true)}
+  });
+  tabs.appendChild(b);
+});
+
+function setMain(k){
+  const s = SITES[current]; curImg = k;
+  spImg.style.opacity = 0;
+  setTimeout(()=>{ spImg.src = src(s.imgs[k],1200); spImg.alt = s.name + ' photo ' + (k+1); spImg.onload=()=>spImg.style.opacity=1; },180);
+  [...spThumbs.children].forEach((t,j)=>t.classList.toggle('on',j===k));
+}
+
+function showSite(i, focus){
+  current = i;
+  const s = SITES[i];
+  [...tabs.children].forEach((t,j)=>{t.setAttribute('aria-selected', j===i); t.tabIndex = j===i?0:-1});
+  if(focus) tabs.children[i].focus();
+  tabs.children[i].scrollIntoView({block:'nearest',inline:'nearest',behavior:'smooth'});
+  spThumbs.innerHTML = '';
+  spThumbs.style.gridTemplateColumns = `repeat(${s.imgs.length},1fr)`;
+  s.imgs.forEach((p,k)=>{
+    const t = document.createElement('button');
+    t.type='button'; t.setAttribute('aria-label','Show photo '+(k+1));
+    t.innerHTML = `<img src="${src(p,400)}" alt="" loading="lazy">`;
+    t.addEventListener('click',()=>setMain(k));
+    spThumbs.appendChild(t);
+  });
+  setMain(0);
+  spInfo.innerHTML = `
+    <span class="sp-type"><i class="fa-solid ${s.icon}"></i>${s.type}</span>
+    <h3>${s.name}</h3>
+    <div class="sp-rating"><i class="fa-solid fa-thumbs-up"></i><strong>${s.rating}</strong> recommend · ${s.reviews} reviews</div>
+    <p>${s.desc}</p>
+    <div class="chips">${s.feats.map(f=>`<span class="chip ${f[2]||''}"><i class="fa-solid ${f[0]}"></i>${f[1]}</span>`).join('')}</div>
+    <a href="#book" class="btn btn-ember" data-book="${i}"><i class="fa-solid fa-calendar-plus"></i>Book ${s.name}</a>`;
+  spInfo.classList.remove('fade-swap'); void spInfo.offsetWidth; spInfo.classList.add('fade-swap');
+  spInfo.querySelector('[data-book]').addEventListener('click',()=>selectSite(i));
+}
+showSite(0);
+
+document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',()=>showSite(SITES.findIndex(s=>s.id===a.dataset.go))));
+
+/* LIGHTBOX */
+const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap');
+let lbSet = [], lbIdx = 0, lastFocus;
+function openLB(set, idx){ lbSet=set; lbIdx=idx; lastFocus=document.activeElement; renderLB(); lb.classList.add('open'); document.body.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
+function renderLB(){ const it=lbSet[lbIdx]; lbImg.src=it.src; lbImg.alt=it.cap; lbCap.textContent=it.cap+'  ·  '+(lbIdx+1)+' / '+lbSet.length; }
+function closeLB(){ lb.classList.remove('open'); document.body.style.overflow=''; lastFocus&&lastFocus.focus(); }
+document.getElementById('lbClose').onclick=closeLB;
+document.getElementById('lbPrev').onclick=()=>{lbIdx=(lbIdx-1+lbSet.length)%lbSet.length;renderLB()};
+document.getElementById('lbNext').onclick=()=>{lbIdx=(lbIdx+1)%lbSet.length;renderLB()};
+lb.addEventListener('click',e=>{if(e.target===lb)closeLB()});
+document.addEventListener('keydown',e=>{
+  if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')closeLB();
+  if(e.key==='ArrowLeft')document.getElementById('lbPrev').click();
+  if(e.key==='ArrowRight')document.getElementById('lbNext').click();
+});
+const openSiteLB=()=>{const s=SITES[current]; openLB(s.imgs.map((p,k)=>({src:src(p,1920),cap:s.name})), curImg)};
+document.getElementById('spMain').addEventListener('click',openSiteLB);
+document.getElementById('spMain').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openSiteLB()}});
+const gItems=[...document.querySelectorAll('.g-item')];
+const gSet=gItems.map(g=>({src:g.querySelector('img').src.replace(/w_\d+/,'w_1920'),cap:g.dataset.cap}));
+gItems.forEach((g,i)=>g.addEventListener('click',()=>openLB(gSet,i)));
+
+/* REVIEWS */
+const track=document.getElementById('reviewTrack');
+track.innerHTML=REVIEWS.map(r=>`<article class="review"><i class="fa-solid fa-quote-left q"></i><p>${r[2]}</p><div class="reviewer"><span class="avatar">${r[0].split(' ').map(x=>x[0]).join('')}</span><div><strong>${r[0]}</strong><small>${r[1]}</small></div></div></article>`).join('');
+const step=()=>track.querySelector('.review').offsetWidth+18;
+document.getElementById('revNext').onclick=()=>track.scrollBy({left:step(),behavior:'smooth'});
+document.getElementById('revPrev').onclick=()=>track.scrollBy({left:-step(),behavior:'smooth'});
+
+/* GOOD TO KNOW ACCORDION */
+document.querySelectorAll('#know button').forEach(b=>b.addEventListener('click',()=>{
+  const li=b.parentElement, open=li.classList.toggle('open'); b.setAttribute('aria-expanded',open);
+}));
+
+/* BOOKING */
+const bSite=document.getElementById('bSite'), bSiteIc=document.getElementById('bSiteIc'), siteMeta=document.getElementById('siteMeta');
+bSite.innerHTML=SITES.map((s,i)=>`<option value="${i}">${s.name} · ${s.type}</option>`).join('');
+const qSite=document.getElementById('qSite'), qGuests=document.getElementById('qGuests');
+qSite.innerHTML=SITES.map((s,i)=>`<option value="${i}">${s.name}</option>`).join('');
+qGuests.innerHTML=Array.from({length:12},(_,i)=>`<option value="${i+1}" ${i===1?'selected':''}>${i+1} guest${i?'s':''}</option>`).join('');
+
+const bIn=document.getElementById('bIn'), bOut=document.getElementById('bOut'), qIn=document.getElementById('qIn'), qOut=document.getElementById('qOut');
+const iso=d=>new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);
+const today=new Date(); const tmr=new Date(); tmr.setDate(tmr.getDate()+1);
+[bIn,qIn].forEach(x=>x.min=iso(today)); [bOut,qOut].forEach(x=>x.min=iso(tmr));
+let guests=2;
+const gOut=document.getElementById('gOut');
+
+const siteIdx=()=>+bSite.value;
+function selectSite(i){ bSite.value=i; update(); }
+function setNotice(id,show,text){ const n=document.getElementById(id); n.classList.toggle('show',show); if(text) n.querySelector('span').textContent=text; }
+
+let lastSite=-1;
+function update(){
+  const i=siteIdx(), s=SITES[i];
+  if(guests>s.sleeps) guests=s.sleeps;
+  gOut.textContent=guests;
+  if(i!==lastSite){
+    lastSite=i;
+    bSiteIc.className='fa-solid '+s.icon+' lead-ic';
+    const access = s.wd==='required' ? ['fa-truck-monster','4x4 / AWD required','warn'] : s.wd==='recommended' ? ['fa-car-side','AWD recommended','warn'] : ['fa-car','Any car is fine',''];
+    const veh = s.rig ? ['fa-ruler-horizontal','Rigs under '+s.rig+' ft',''] : null;
+    const items=[['fa-user-group','Up to '+s.sleeps+' guests',''], access, veh, s.pets?['fa-paw','Pets welcome','']:['fa-ban','No pets','warn']].filter(Boolean);
+    siteMeta.innerHTML=items.map(x=>`<span class="${x[2]}"><i class="fa-solid ${x[0]}"></i>${x[1]}</span>`).join('');
+  }
+  // rig
+  const fRig=document.getElementById('fRig'), rig=parseFloat(document.getElementById('bRig').value);
+  const tooLong = !!(s.rig && rig>=s.rig);
+  let siteMsg='';
+  if(tooLong) siteMsg=`${s.name} fits vehicles under ${s.rig} ft. Try ${s.rig===15?'Cedarwood (under 18 ft)':'a tent site'} or ask Shaums.`;
+  else if(s.id==='alderwood' && rig>0) siteMsg='Alderwood is tent only. You can park at the site but not camp in a rig.';
+  else if((s.id==='trailer'||s.id==='cabin') && rig>0) siteMsg=`The ${s.name} is lodging, so no rig is needed. Just park and settle in.`;
+  fRig.classList.toggle('bad', tooLong);
+  document.getElementById('noticeSite').classList.toggle('info', !tooLong);
+  setNotice('noticeSite', !!siteMsg, siteMsg);
+  setNotice('noticePets', document.getElementById('bPets').checked && !s.pets);
+  // nights
+  if(bIn.value) bOut.min=iso(new Date(new Date(bIn.value).getTime()+86400000));
+  const n = bIn.value&&bOut.value ? Math.round((new Date(bOut.value)-new Date(bIn.value))/86400000) : 0;
+  document.getElementById('sumSite').textContent=s.name;
+  document.getElementById('sumText').textContent = n>0 ? `${n} night${n>1?'s':''} · ${guests} guest${guests>1?'s':''}` : 'Pick your dates';
+}
+document.getElementById('gMinus').onclick=()=>{ if(guests>1){guests--;update()} };
+document.getElementById('gPlus').onclick=()=>{ if(guests<SITES[siteIdx()].sleeps){guests++;update()} };
+bSite.addEventListener('change',update);
+['bIn','bOut','bRig'].forEach(id=>document.getElementById(id).addEventListener('input',update));
+document.getElementById('bPets').addEventListener('change',update);
+update();
+
+/* optional extras */
+const moreBtn=document.getElementById('moreBtn'), more=document.getElementById('more');
+const setMore=o=>{more.classList.toggle('open',o);moreBtn.setAttribute('aria-checked',o)};
+moreBtn.onclick=()=>setMore(!more.classList.contains('open'));
+
+/* quick bar hands off to the full form */
+qIn.addEventListener('change',()=>{ if(qIn.value){ const d=new Date(qIn.value); d.setDate(d.getDate()+1); qOut.min=iso(d); if(!qOut.value||qOut.value<=qIn.value) qOut.value=iso(d);} });
+document.getElementById('quickForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  if(qIn.value) bIn.value=qIn.value; if(qOut.value) bOut.value=qOut.value;
+  guests=+qGuests.value; selectSite(+qSite.value);
+  if(+qGuests.value>SITES[+qSite.value].sleeps){ setNotice('noticeSite',true,`${SITES[+qSite.value].name} sleeps up to ${SITES[+qSite.value].sleeps}. For bigger groups, Cedarwood takes 12 and Alderwood takes 10.`); document.getElementById('noticeSite').classList.add('info'); }
+  document.getElementById('book').scrollIntoView({behavior:'smooth'});
+  setTimeout(()=>document.getElementById('bName').focus({preventScroll:true}),700);
+});
+
+function fieldErr(id,msg){ const f=document.getElementById(id); f.classList.toggle('bad',!!msg); f.querySelector('.err').textContent=msg||''; return !msg; }
+document.getElementById('bookForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const s=SITES[siteIdx()];
+  let ok=true;
+  ok&=fieldErr('fIn', bIn.value?'':'Choose a date');
+  ok&=fieldErr('fOut', !bOut.value?'Choose a date':(bOut.value<=bIn.value?'Must be after check in':''));
+  ok&=fieldErr('fName', document.getElementById('bName').value.trim().length>1?'':'Please enter your name');
+  ok&=fieldErr('fEmail', /^\S+@\S+\.\S+$/.test(document.getElementById('bEmail').value)?'':'Enter a valid email');
+  const rig=parseFloat(document.getElementById('bRig').value);
+  const rigOk=fieldErr('fRig', s.rig && rig>=s.rig ? `Must be under ${s.rig} ft` : '');
+  if(!rigOk) setMore(true);
+  ok&=rigOk;
+  if(!ok){ const first=document.querySelector('#bookForm .bad input'); first&&first.focus(); return; }
+  const n=Math.round((new Date(bOut.value)-new Date(bIn.value))/86400000);
+  const fmt=d=>new Date(d+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  document.getElementById('doneText').textContent=`${s.name}, ${fmt(bIn.value)} to ${fmt(bOut.value)} (${n} night${n>1?'s':''}, ${guests} guest${guests>1?'s':''}). Shaums will email ${document.getElementById('bEmail').value} to confirm.`;
+  document.getElementById('done').classList.add('show');
+});
+document.getElementById('again').onclick=()=>{ document.getElementById('done').classList.remove('show'); document.getElementById('bookForm').reset(); guests=2; setMore(false); selectSite(0); };
+
+/* NAV + MOBILE */
+const nav=document.getElementById('nav'), mbar=document.getElementById('mbar');
+const onScroll=()=>{
+  nav.classList.toggle('scrolled', scrollY>40);
+  const bookTop=document.getElementById('book').getBoundingClientRect().top;
+  mbar.classList.toggle('show', scrollY>innerHeight*.7 && bookTop>innerHeight);
+};
+addEventListener('scroll',onScroll,{passive:true}); onScroll();
+const burger=document.getElementById('burger'), menu=document.getElementById('menu');
+const setMenu=o=>{menu.classList.toggle('open',o);burger.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.innerHTML=`<i class="fa-solid ${o?'fa-xmark':'fa-bars'}"></i>`;document.body.style.overflow=o?'hidden':''};
+burger.onclick=()=>setMenu(!menu.classList.contains('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu.classList.contains('open'))setMenu(false)});
+
+/* REVEAL */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
